@@ -221,7 +221,7 @@
             echo $row[1].'&nbsp;&nbsp;'.$row[2].'&nbsp;&nbsp;'.$row[3].'</option>';
         }
         mysqli_free_result($res);
-        echo '<input type="file" name="file[]" multiple accept="image/*">';
+        echo '<input type="file" name="file[]" multiple accept="assets/image/*">';
         echo '<input type="submit" name="addimage" value="Add" 
 		class="btn btn-sm btn-info">';
         echo '</select>';
@@ -232,8 +232,8 @@
                     echo '<script>alert("Upload file error:'.$v.'")</script>';
                     continue;
                 }
-                if(move_uploaded_file($_FILES['file']['tmp_name'][$k],'images/'.$v)){
-                    $ins='insert into images(hotelid,imagepath) values('.$_REQUEST['hotelid'].',"images/'.$v.'")';
+                if(move_uploaded_file($_FILES['file']['tmp_name'][$k],'assets/images/'.$v)){
+                    $ins='insert into images(hotelid,imagepath) values('.$_REQUEST['hotelid'].',"assets/images/'.$v.'")';
                     mysqli_query($link, $ins);
                 }
             }

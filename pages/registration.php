@@ -1,4 +1,9 @@
+<header class="col-sm-12 col-md-12 col-lg-12">
+    <?php include_once("pages/login.php");?>
+</header>
+
 <h3>Registration Form</h3>
+
 <?php
 if(!isset($_POST['regbtn']))
 {

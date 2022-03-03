@@ -38,6 +38,8 @@ include_once("pages/functions.php");
                     include_once("pages/registration.php");
                 if ($page == 4)
                     include_once("pages/admin.php");
+                if ($page == 5)
+                    include_once("pages/private.php");
             }
             ?>
         </section>
